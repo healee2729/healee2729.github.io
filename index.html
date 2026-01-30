@@ -3,30 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>윤혜리 LOG</title>
+    <title>윤혜리의 Data Log</title>
     <style>
-        body { font-family: 'Pretendard', sans-serif; text-align: center; background-color: #f4f4f9; color: #333; margin: 0; padding: 50px; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .profile-img { width: 150px; height: 150px; border-radius: 50%; background-color: #ddd; margin-bottom: 20px; object-fit: cover; }
-        h1 { margin-bottom: 10px; font-size: 24px; }
-        p { color: #666; line-height: 1.6; }
-        .btn { display: inline-block; margin: 10px; padding: 10px 20px; background-color: #333; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; }
-        .btn:hover { background-color: #555; }
+        /* 전체 디자인 설정 */
+        body { font-family: 'Pretendard', sans-serif; background-color: #f5f7fa; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        /* 헤더 (제목 부분) */
+        header { text-align: center; margin-bottom: 40px; padding: 40px 0; }
+        h1 { margin: 0; font-size: 28px; color: #2c3e50; }
+        p.subtitle { color: #7f8c8d; margin-top: 10px; }
+
+        /* KPI 카드 섹션 */
+        .kpi-section { display: flex; gap: 15px; margin-bottom: 40px; justify-content: center; flex-wrap: wrap; }
+        .kpi-card { background: white; padding: 20px; border-radius: 12px; width: 150px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .kpi-title { font-size: 14px; color: #7f8c8d; margin-bottom: 5px; }
+        .kpi-value { font-size: 24px; font-weight: bold; color: #2980b9; }
+
+        /* 기록 리스트 (게시판 느낌) */
+        .log-list { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .log-item { padding: 25px; border-bottom: 1px solid #eee; transition: 0.2s; }
+        .log-item:last-child { border-bottom: none; }
+        .log-item:hover { background-color: #fbfbfb; }
+        
+        .tag { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 8px; }
+        .tag.work { background-color: #e3f2fd; color: #1976d2; } /* 업무 태그 색상 */
+        .tag.study { background-color: #e8f5e9; color: #388e3c; } /* 공부 태그 색상 */
+        
+        .log-title { font-size: 18px; margin: 0 0 8px 0; font-weight: bold; }
+        .log-date { font-size: 13px; color: #999; }
+        .log-desc { margin-top: 10px; line-height: 1.6; color: #555; }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://via.placeholder.com/150" alt="프로필 사진" class="profile-img">
-        
-        <h1>안녕하세요, 윤혜리입니다 👋</h1>
-        <p>
-            데이터 분석을 공부하고 기록하는 공간입니다.<br>
-            어제보다 더 나은 내일을 위해서.
-        </p>
-        
-        <div style="margin-top: 30px;">
-            <a href="#" class="btn">블로그 / 기록</a>
-            <a href="mailto:내이메일@gmail.com" class="btn">메일 보내기</a>
+        <header>
+            <h1>📈 Hyeri's Data Log</h1>
+            <p class="subtitle">데이터 분석 공부 & 업무 성과 기록장</p>
+        </header>
+
+        <div class="kpi-section">
+            <div class="kpi-card">
+                <div class="kpi-title">목표 달성률</div>
+                <div class="kpi-value">85%</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">작성한 문서</div>
+                <div class="kpi-value">12건</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">학습 시간</div>
+                <div class="kpi-value">40H</div>
+            </div>
+        </div>
+
+        <div class="log-list">
+            
+            <div class="log-item">
+                <span class="tag work">KPI 회고</span>
+                <div class="log-date">2026.01.30</div>
+                <h3 class="log-title">2025년 업무 성과 및 반성</h3>
+                <div class="log-desc">
+                    작년 KPI 결과에 대한 분석. 원가 관리 부분에서 아쉬움이 있었음.<br>
+                    올해는 데이터 기반으로 창고료 절감 방안을 마련할 예정.
+                </div>
+            </div>
+
+            <div class="log-item">
+                <span class="tag study">데이터 공부</span>
+                <div class="log-date">2026.02.01 (예정)</div>
+                <h3 class="log-title">데이터 분석 입문 시작</h3>
+                <div class="log-desc">
+                    SQL과 파이썬 기초 강의 수강 계획.<br>
+                    회사 재고 데이터를 직접 분석해보는 것이 1차 목표.
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
