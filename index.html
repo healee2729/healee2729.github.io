@@ -9,8 +9,10 @@
         body { font-family: 'Pretendard', sans-serif; background-color: #f5f7fa; color: #333; margin: 0; padding: 20px; }
         .container { max-width: 800px; margin: 0 auto; }
         
-        /* 헤더 (제목 부분) */
+        /* 헤더 (제목과 사진 부분) */
         header { text-align: center; margin-bottom: 40px; padding: 40px 0; }
+        /* 케로로 사진 스타일 */
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #4CAF50; margin-bottom: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h1 { margin: 0; font-size: 28px; color: #2c3e50; }
         p.subtitle { color: #7f8c8d; margin-top: 10px; }
 
@@ -27,29 +29,29 @@
         .log-item:hover { background-color: #fbfbfb; }
         
         .tag { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 8px; }
-        .tag.work { background-color: #e3f2fd; color: #1976d2; } /* 업무 태그 색상 */
-        .tag.study { background-color: #e8f5e9; color: #388e3c; } /* 공부 태그 색상 */
+        .tag.work { background-color: #e3f2fd; color: #1976d2; }
+        .tag.study { background-color: #e8f5e9; color: #388e3c; }
         
         .log-title { font-size: 18px; margin: 0 0 8px 0; font-weight: bold; }
         .log-date { font-size: 13px; color: #999; }
         .log-desc { margin-top: 10px; line-height: 1.6; color: #555; }
-
     </style>
 </head>
 <body>
     <div class="container">
         <header>
+            <img src="https://i.pinimg.com/736x/c0/57/32/c057322bbc207af7cb0bb669f3d4e837.jpg" alt="케로로 프로필" class="profile-img">
             <h1>📈 Hyeri's Data Log</h1>
-            <p class="subtitle">데이터 분석 공부 & 업무 성과 기록장</p>
+            <p class="subtitle">케로로 중사처럼 데이터 정복하기</p>
         </header>
 
         <div class="kpi-section">
             <div class="kpi-card">
-                <div class="kpi-title">목표 달성률</div>
+                <div class="kpi-title">지구 침략률(?)</div>
                 <div class="kpi-value">85%</div>
             </div>
             <div class="kpi-card">
-                <div class="kpi-title">작성한 문서</div>
+                <div class="kpi-title">작성한 보고서</div>
                 <div class="kpi-value">12건</div>
             </div>
             <div class="kpi-card">
@@ -59,27 +61,15 @@
         </div>
 
         <div class="log-list">
-            
             <div class="log-item">
                 <span class="tag work">KPI 회고</span>
                 <div class="log-date">2026.01.30</div>
-                <h3 class="log-title">2025년 업무 성과 및 반성</h3>
+                <h3 class="log-title">1월 업무 성과 정리</h3>
                 <div class="log-desc">
-                    작년 KPI 결과에 대한 분석. 원가 관리 부분에서 아쉬움이 있었음.<br>
-                    올해는 데이터 기반으로 창고료 절감 방안을 마련할 예정.
+                    이번 달 주요 데이터 분석 내용 정리.<br>
+                    다음 달 목표: 건프라 조립 시간 줄이고 업무 효율 높이기.
                 </div>
             </div>
-
-            <div class="log-item">
-                <span class="tag study">데이터 공부</span>
-                <div class="log-date">2026.02.01 (예정)</div>
-                <h3 class="log-title">데이터 분석 입문 시작</h3>
-                <div class="log-desc">
-                    SQL과 파이썬 기초 강의 수강 계획.<br>
-                    회사 재고 데이터를 직접 분석해보는 것이 1차 목표.
-                </div>
-            </div>
-
         </div>
     </div>
 </body>
